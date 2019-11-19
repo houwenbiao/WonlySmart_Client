@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         QtimesServiceManager.instance().connect(getApplicationContext());
-        /*注册变化监听*/
+        //注册变化监听
         QtimesServiceManager.instance().setListener(new QtimesServiceManager.QtimesDoorServiceListener() {
             @Override
             public void onPersonNumberChange(int inNum, int outNum) {

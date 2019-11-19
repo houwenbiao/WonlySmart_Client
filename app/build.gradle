@@ -19,11 +19,6 @@ android {
     }
 }
 
-repositories {
-    flatDir {
-        dirs 'libs'   // aar目录
-    }
-}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -33,5 +28,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation(name: 'service_wonly_client', ext: 'aar')
+    implementation files('libs/service_wonly_client.jar')
 }
